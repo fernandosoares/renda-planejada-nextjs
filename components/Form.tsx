@@ -17,8 +17,7 @@ const NumberFormatCustom = React.forwardRef<NumberFormat, ICustomInputProps>(
           onChange({
             target: {
               name: props.name,
-              //@ts-ignore
-              value: values.value,
+              value: parseInt(values.value),
             },
           })
         }}
@@ -42,30 +41,33 @@ export default function Form() {
     setState({ ...state, [e.target.name]: e.target.value })
   }
 
+  console.log(state)
+
   return (
     <Container maxWidth='lg'>
       <Grid container spacing={3}>
         <Grid item xs={12} md={6}>
           <TextField
             fullWidth
-            label='Qual seu e-mail?'
-            placeholder='Ex. email@dominio.com'
             variant='outlined'
             name='email'
+            label='Qual seu e-mail?'
+            placeholder='Ex. email@dominio.com'
+            value={state.email}
+            onChange={handleChange}
           />
         </Grid>
         <Grid item xs={12} md={6}>
           <TextField
             fullWidth
+            variant='outlined'
+            name='income'
             label='Informe sua renda líquida'
             value={state.income}
             onChange={handleChange}
-            name='income'
-            id='formatted-income-input'
             InputProps={{
               inputComponent: NumberFormatCustom as any,
             }}
-            variant='outlined'
           />
         </Grid>
         <Grid item xs={12} display='flex' justifyContent='center'>

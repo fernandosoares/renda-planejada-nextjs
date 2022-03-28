@@ -1,6 +1,6 @@
 export interface IFormState {
   email: string
-  income: number
+  income: string
 }
 
 export interface ICustomInputProps {

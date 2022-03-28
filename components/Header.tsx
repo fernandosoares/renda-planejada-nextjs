@@ -6,7 +6,7 @@ const Header: React.FC = () => {
   return (
     <>
       <Grid container justifyContent='center'>
-        <Grid item xs={12} md={8}>
+        <Grid item xs={12} sm={11} md={10} lg={6}>
           <Typography variant='h1' className='title'>
             <PieChartOutlineIcon className='title-icon' />
             Renda Planejada

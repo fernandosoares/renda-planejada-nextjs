@@ -3,7 +3,6 @@ import '@fontsource/sora/800.css'
 import '@fontsource/sora/700.css'
 import '@fontsource/sora/500.css'
 import '@fontsource/sora/400.css'
-import { palette } from '@mui/system'
 
 export const theme = createTheme({
   palette: {

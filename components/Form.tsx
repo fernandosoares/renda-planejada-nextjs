@@ -55,6 +55,7 @@ export default function Form() {
             label='Qual seu e-mail?'
             placeholder='Ex. email@dominio.com'
             value={state.email}
+            size='small'
             onChange={handleChange}
           />
         </Grid>

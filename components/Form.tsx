@@ -45,11 +45,12 @@ export default function Form() {
 
   return (
     <Container maxWidth='lg'>
-      <Grid container spacing={3}>
+      <Grid container spacing={5}>
         <Grid item xs={12} md={6}>
           <TextField
             fullWidth
             variant='outlined'
+            color='secondary'
             name='email'
             label='Qual seu e-mail?'
             placeholder='Ex. email@dominio.com'
@@ -60,6 +61,7 @@ export default function Form() {
         <Grid item xs={12} md={6}>
           <TextField
             fullWidth
+            color='secondary'
             variant='outlined'
             name='income'
             label='Informe sua renda líquida'
@@ -71,7 +73,9 @@ export default function Form() {
           />
         </Grid>
         <Grid item xs={12} display='flex' justifyContent='center'>
-          <Button variant='outlined'>PLANEJAR MEU ORÇAMENTO</Button>
+          <Button color='secondary' variant='outlined'>
+            PLANEJAR MEU ORÇAMENTO
+          </Button>
         </Grid>
       </Grid>
     </Container>

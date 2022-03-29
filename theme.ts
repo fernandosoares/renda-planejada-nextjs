@@ -16,5 +16,4 @@ export const theme: MantineThemeOverride = {
       },
     },
   },
-  focusRing: 'auto',
 }

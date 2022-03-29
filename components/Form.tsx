@@ -1,4 +1,4 @@
-import { Container, Grid, Input } from '@mantine/core'
+import { Button, Container, Grid, Input } from '@mantine/core'
 import React from 'react'
 import { At, CurrencyReal } from 'tabler-icons-react'
 
@@ -22,6 +22,11 @@ const Form: React.FC = () => {
             icon={<CurrencyReal />}
             placeholder='Informe sua renda líquida'
           />
+        </Grid.Col>
+        <Grid.Col span={12} sx={{ display: 'flex', justifyContent: 'center' }}>
+          <Button size='xl' radius='lg'>
+            PLANEJAR MEU ORÇAMENTO
+          </Button>
         </Grid.Col>
       </Grid>
     </Container>

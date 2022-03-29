@@ -1,14 +1,12 @@
-import { CssBaseline } from '@mui/material'
-import { ThemeProvider } from '@mui/system'
+import { MantineProvider } from '@mantine/core'
 import type { AppProps } from 'next/app'
 import { theme } from '../theme'
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <MantineProvider withNormalizeCSS withGlobalStyles theme={theme}>
       <Component {...pageProps} />
-    </ThemeProvider>
+    </MantineProvider>
   )
 }
 

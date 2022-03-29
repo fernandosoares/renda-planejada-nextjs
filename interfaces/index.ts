@@ -1,9 +1,19 @@
-export interface IFormState {
-  email: string
-  income: string
+export interface IArticles {
+  articles: IArticle[]
 }
 
-export interface ICustomInputProps {
-  onChange: (event: { target: { name: string; value: number } }) => void
+export interface IArticle {
+  source: ISource
+  author: string
+  title: string
+  description: string
+  url: string
+  urlToImage: string
+  publishedAt: Date
+  content: null
+}
+
+export interface ISource {
+  id: string
   name: string
 }

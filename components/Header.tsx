@@ -1,36 +1,38 @@
-import PieChartOutlineIcon from '@mui/icons-material/PieChartOutline'
-import { Grid, Typography } from '@mui/material'
 import React from 'react'
+
+import { Container, Grid, Text, Title } from '@mantine/core'
 
 const Header: React.FC = () => {
   return (
     <>
-      <Grid container justifyContent='center'>
-        <Grid item xs={12} sm={11} md={10} lg={6}>
-          <Typography variant='h1' className='title'>
-            <PieChartOutlineIcon className='title-icon' />
-            Renda Planejada
-          </Typography>
-          <Typography
-            variant='caption'
-            align='center'
-            display='block'
-            className='subtitle'
-          >
-            _você no controle
-          </Typography>
-          <Typography variant='h2' align='center' className='site-description'>
-            Renda Planejada é uma ferramenta de planejamento orçamentário
-            pessoal, sendo como um guia para controle de despesas utilizando
-            regras de aplicação de capital.
-          </Typography>
+      <Container size='lg'>
+        <Grid justify='center'>
+          <Grid.Col xs={12} md={6}>
+            <Title color='gray' align='center' order={1}>
+              Renda Planejada
+            </Title>
+            <Text align='center' component='p'>
+              _você no controle
+            </Text>
+            <Grid justify='center'>
+              <Grid.Col span={12}>
+                <Title order={2} align='center'>
+                  Renda Planejada é uma ferramenta de planejamento orçamentário
+                  pessoal, sendo como um guia para controle de despesas
+                  utilizando regras de aplicação de capital.
+                </Title>
+              </Grid.Col>
+            </Grid>
+          </Grid.Col>
         </Grid>
-      </Grid>
-      <Grid container justifyContent='center'>
-        <Typography variant='body1' className='go'>
-          Vamos lá?
-        </Typography>
-      </Grid>
+        <Grid justify='center'>
+          <Grid.Col span={12}>
+            <Text align='center' component='p'>
+              Vamos lá?
+            </Text>
+          </Grid.Col>
+        </Grid>
+      </Container>
     </>
   )
 }
